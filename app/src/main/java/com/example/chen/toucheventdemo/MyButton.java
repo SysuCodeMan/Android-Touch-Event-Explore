@@ -20,15 +20,14 @@ public class MyButton extends Button {
     public boolean dispatchTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "onConsume action_down event");
-                break;
-            case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "onConsume action_move event");
+                Log.e(TAG, "dispatch action_down event");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG, "onConsume action_up event");
+                Log.e(TAG, "dispatch action_up event");
                 break;
         }
+//        return true;
+//        return false;
         return super.dispatchTouchEvent(event);
     }
 
@@ -38,16 +37,13 @@ public class MyButton extends Button {
             case MotionEvent.ACTION_DOWN:
                 Log.e(TAG, "onConsume action_down event");
                 break;
-            case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "onConsume action_move event");
-                break;
             case MotionEvent.ACTION_UP:
                 Log.e(TAG, "onConsume action_up event");
                 break;
         }
-//        return super.onTouchEvent(event);
+        return super.onTouchEvent(event);
 //        return false;
-        return true;
+//        return true;
     }
 
 }

@@ -28,13 +28,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case MotionEvent.ACTION_DOWN:
                 Log.e(TAG, "dispatch action_down event");
                 break;
-            case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "dispatch action_move event");
-                break;
             case MotionEvent.ACTION_UP:
                 Log.e(TAG, "dispatch action_up event");
                 break;
         }
+//        return true;
+//        return false;
         return super.dispatchTouchEvent(ev);
     }
 
@@ -44,13 +43,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case MotionEvent.ACTION_DOWN:
                 Log.e(TAG, "onConsume action_down event");
                 break;
-            case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "onConsume action_move event");
-                break;
             case MotionEvent.ACTION_UP:
                 Log.e(TAG, "onConsume action_up event");
                 break;
         }
+//        return true;
+//        return false;
         return super.onTouchEvent(event);
     }
 
